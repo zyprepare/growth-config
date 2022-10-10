@@ -1,0 +1,9 @@
+{
+  "name": "growth-config",
+  "private": true,
+  "description": "前端开发统一配置",
+  "scripts": {
+
+  },
+  "devDependencies": {}
+}
