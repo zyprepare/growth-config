@@ -3,7 +3,13 @@
   "private": true,
   "description": "前端开发统一配置",
   "scripts": {
-
+    "cs": "changeset",
+    "v": "changeset version",
+    "pre": "changeset pre enter beta",
+    "publish": "changeset publish --registry=http://10.224.211.82:4873/"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@changesets/changelog-github": "~0.4.7",
+    "@changesets/cli": "~2.25.0"
+  }
 }
