@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: ['dev']
+
+jobs:
+  build:
+    name: Build test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test1
+        run: echo 'test1'
+
+      - name: Test2
+        run: echo 'test2'
