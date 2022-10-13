@@ -6,11 +6,23 @@ on:
 
 jobs:
   build:
-    name: Build test
+    name: update version
     runs-on: ubuntu-latest
     steps:
-      - name: Test1
-        run: echo 'test1'
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-      - name: Test2
-        run: echo 'test2'
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.12.2
+
+      - name: Setup Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Update Version
+        run: pnpm run v
