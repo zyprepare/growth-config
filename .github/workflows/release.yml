@@ -1,0 +1,13 @@
+name: Release
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Repo
+        run: echo '${{ github.repository }} ,, ${{ github.ref }}'

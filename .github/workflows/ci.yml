@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: pnpm/action-setup@v2.2.3
         with:
@@ -28,3 +28,12 @@ jobs:
         run: pnpm run v
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: update changelog message
+          title: Update Changelog title
+          body: Update changelog to reflect release changes
+          branch: update-changelog
+          base: main
