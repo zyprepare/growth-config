@@ -2,8 +2,7 @@ name: Release
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, reopened]
     branches:
       - main
 
@@ -13,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo ${{ github.event }}
+        run: echo ${{ github.ref }} ${{ github.head_ref }}
