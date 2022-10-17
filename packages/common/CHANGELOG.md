@@ -1,5 +1,17 @@
 # growth-test-common
 
+## 1.0.8
+
+### Patch Changes
+
+- [`59a1205`](https://github.com/zyprepare/growth-config/commit/59a12054d6bd8f43f1f69759fff76bca62cd3604) - common1.0.7
+
+- [`d2cfd02`](https://github.com/zyprepare/growth-config/commit/d2cfd02706fa5c49373422e28e5548846c727b11) - common1.0.8
+
+- [`a10d1a8`](https://github.com/zyprepare/growth-config/commit/a10d1a84e99034ba828ab7c37017a97c20ecc640) - common1.0.9
+
+- [`d70923e`](https://github.com/zyprepare/growth-config/commit/d70923edf3b3031ce765f0df62e56e26006109a5) - update commmon1.0.6
+
 ## 1.0.6
 
 ### Patch Changes
