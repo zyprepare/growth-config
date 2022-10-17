@@ -58,7 +58,7 @@ jobs:
 
       - name: Push Update
         run: |
-          git push --flows-tags
+          git push --follow-tags
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
