@@ -36,7 +36,9 @@ jobs:
           git config --global user.name "zhouyun"
 
       - name: Checkout Release Branch
-        run: git checkout -b release
+        run: |
+          git checkout -b release
+          git push origin release
 
       - name: Install dependencies
         run: pnpm install
