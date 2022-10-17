@@ -30,6 +30,11 @@ jobs:
         with:
           node-version: 14.x
 
+      - name: Git configuration
+        run: |
+          git config --global user.email "zyprepare@163.com"
+          git config --global user.name "zhouyun"
+
       - name: Checkout Release Branch
         run: git checkout -b release
 
