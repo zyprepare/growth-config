@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish Packages
-        run: pnpm run publish
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-
-      - name: Push Tag
-        run: git push --flows-tags
+        run: |
+          git status
 
