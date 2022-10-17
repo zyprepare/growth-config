@@ -38,10 +38,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish Packages
-        run: pnpm run publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Publish Packages
+      #   run: pnpm run publish
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push Tags
+        run: |
+          git tag test1
+          git push origin --tags
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
