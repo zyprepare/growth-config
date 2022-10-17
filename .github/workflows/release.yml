@@ -2,7 +2,8 @@ name: Release
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types:
+      - closed
     branches:
       - main
 
@@ -12,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        run: echo ${{ github.ref }} ${{ github.head_ref }}
+        run: echo ${{ github.ref }} ${{ github.head_ref }} ${{ github.event.pull_request.merged }}
