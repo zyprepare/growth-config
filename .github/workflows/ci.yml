@@ -4,9 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: Please select the branch to publish
+        description: Please select the type to publish
         required: true
-        default: 'main'
+        type: choice
+        options:
+          - alpha
+          - beta
+          - latest
+        default: 'latest'
 
 jobs:
   build:

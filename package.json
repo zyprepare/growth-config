@@ -7,7 +7,7 @@
     "v": "changeset version",
     "pre": "changeset pre enter beta",
     "publish2": "changeset publish --registry=http://10.224.211.82:4873/",
-    "publish": "changeset publish --registry=https://registry.npmjs.org/"
+    "publish": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "~0.4.7",
