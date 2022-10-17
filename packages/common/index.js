@@ -1,3 +1,3 @@
 export default () => {
-  console.log('common@1.0.8')
+  console.log('common@1.0.9')
 }

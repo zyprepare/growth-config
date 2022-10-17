@@ -38,7 +38,7 @@ jobs:
       - name: Checkout Release Branch
         run: |
           git checkout -b release
-          git push origin release
+          git push --set-upstream origin release
 
       - name: Install dependencies
         run: pnpm install
