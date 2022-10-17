@@ -18,8 +18,9 @@ jobs:
     name: Bump
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo $(date +'%Y-%m-%d')
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=today::$(date +'%Y-%m-%d')"
 
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -47,5 +48,5 @@ jobs:
           commit-message: update changelog message
           title: Update Changelog title
           body: Update changelog to reflect release changes
-          branch: release/${{$(date +'%Y%m%d')}}
+          branch: release/${{ steps.date.outputs.today }}
           base: main
