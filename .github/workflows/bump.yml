@@ -18,6 +18,9 @@ jobs:
     name: Bump
     runs-on: ubuntu-latest
     steps:
+      - name: Test
+        run: echo $(date +'%Y-%m-%d')
+
       - name: Checkout Repo
         uses: actions/checkout@v3
 
@@ -30,16 +33,6 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Git configuration
-        run: |
-          git config --global user.email "zyprepare@163.com"
-          git config --global user.name "zhouyun"
-
-      - name: Checkout Release Branch
-        run: |
-          git checkout -b release
-          git push --set-upstream origin release
-
       - name: Install dependencies
         run: pnpm install
 
@@ -48,25 +41,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit Changelog
-        run: |
-          git add .
-          git commit -m "update version and changelog"
-
-      - name: Publish Packages
-        run: pnpm run publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Push Update
-        run: |
-          git push --follow-tags
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: update changelog message
           title: Update Changelog title
           body: Update changelog to reflect release changes
-          branch: release
+          branch: release/$(date +'%Y-%m-%d')
           base: main
