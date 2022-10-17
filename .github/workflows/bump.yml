@@ -1,4 +1,4 @@
-name: CI
+name: Bump
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-    name: Bump
+    name: Bump-
     runs-on: ubuntu-latest
     steps:
       - name: Get current date
