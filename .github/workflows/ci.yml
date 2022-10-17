@@ -15,7 +15,7 @@ on:
 
 jobs:
   build:
-    name: Release
+    name: Bump
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

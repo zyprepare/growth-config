@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo ${{ github.event }}
