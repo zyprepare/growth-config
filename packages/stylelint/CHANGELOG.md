@@ -1,5 +1,11 @@
 # stylelint-config-growth
 
+## 1.0.2
+
+### Patch Changes
+
+- aa
+
 ## 1.0.1
 
 ### Patch Changes

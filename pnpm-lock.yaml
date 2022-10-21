@@ -49,10 +49,12 @@ importers:
 
   packages/stylelint:
     specifiers:
+      eslint-config-growth-test: workspace:~1.0.2
       stylelint-config-recommended-scss: ~4.3.0
       stylelint-config-standard: ~22.0.0
       stylelint-scss: ~3.21.0
     dependencies:
+      eslint-config-growth-test: link:../eslint
       stylelint-config-recommended-scss: 4.3.0_stylelint-scss@3.21.0
       stylelint-config-standard: 22.0.0
       stylelint-scss: 3.21.0
