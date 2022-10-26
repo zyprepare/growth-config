@@ -1,5 +1,11 @@
 # growth-test-common
 
+## 1.0.10
+
+### Patch Changes
+
+- [`a574243`](https://github.com/zyprepare/growth-config/commit/a574243a03343aebdb5da59b6a8628ecb60ddb45) - test
+
 ## 1.0.9
 
 ### Patch Changes
